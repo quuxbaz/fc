@@ -13,14 +13,6 @@ WRITER object with which we can write rows to."""
     return writer
 
 def main():
-    """COLUMN_KEYS is a list such as ORG=organization,HOMEPAGE=url.  This
-means append a column to the CSV whose header is ORG but the value for
-the column is to be found in the JSON key Organization.  Similarly,
-append a CSV column whose header is HOMEPAGE and fill it with the
-value found in the JSON key url.
-
-    """
-    
     global ARGS
     parser = argparse.ArgumentParser(description="Reads a CSV and writes a CSV.")
     parser.add_argument("--csv", metavar="INPUT", type=str, required = True,
